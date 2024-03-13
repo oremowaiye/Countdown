@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+* {
+    
+}
+
+body{
+    max-width: 800px;
+    margin-inline: auto;
+    background: orange;
+    
+}
+.heading{
+    font-size: 4rem;
+    font-family: 'Passion One', sans-serif;
+}
+
+.class{
+       
+    border:rgb(31, 31, 164);
+    font-family: 'Passion One', sans-serif;
+
+    /* border: dotted; */
+                       /* position:absolute; */
+
+    height: 16px;
+    width: 25px;
+                           
+}
+.text-center{
+    font-family: 'Passion One', sans-serif;
+}
+
+
+
+
+/* "font-bold text-white rounded-full border-dotted border-gray-700 border-4 flex items-center justify-center text-2xl lg:text-4xl h-16 lg:h-24 w-16 lg:w-24" */

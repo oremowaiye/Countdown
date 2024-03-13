@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+</head>
+
+    <body>
+    
+      
+      <!-- Header -->
+      <header> 
+        <h1 class="heading">Countdown</h1> 
+        <div >
+          <div>
+            <h6></h6>
+    
+            
+            <!-- Count down -->
+            <div id="class">
+                    
+                  <div class=class id="cdD">00</div>
+                  <p class="text-center text-xs mt-2" > Days</p>
+                
+                  <div class="class" id="cdH">00</div>
+                  <p class="text-center text-xs mt-2">Hours</p>
+                
+    
+                
+                  <div class="class" id="cdM">00</div>
+                  <p class="text-center text-xs mt-2">Minutes</p>
+                
+    
+               
+                  <div class=class id="cdS">00</div>
+                  <p class="text-center text-xs mt-2">Seconds</p>
+                
+    
+            
+            </div>
+    
+            <!-- Content -->
+    
+    
+          </div>
+        </div>   
+      </header>  
+    
+      <script>
+        // Change the value of countDownEndDate to the day you want to end the count down
+        var countDownEndDate = "December 31, 2024 12:00:00";
+        
+        var endDate = new Date(countDownEndDate).getTime();
+        
+        var x = setInterval(function() {
+        
+          var timeNow = new Date().getTime();
+        
+          var timeLeft = endDate - timeNow;
+        
+          var days    = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          var hours   = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+          if(days < 10) {
+            days = "0" + days;
+          }
+    
+          if(hours < 10) {
+            hours = "0" + hours;
+          }
+    
+          if(minutes < 10) {
+            minutes = "0" + minutes;
+          }
+    
+          if(seconds < 10) {
+            seconds = "0" + seconds;
+          }
+        
+          if (timeLeft > 0) {
+            document.getElementById("cdD").innerHTML = days;
+            document.getElementById("cdH").innerHTML = hours;
+            document.getElementById("cdM").innerHTML = minutes;
+            document.getElementById("cdS").innerHTML = seconds;
+          }
+        }, 1000);
+      </script>
+    </body>
+    </html>
